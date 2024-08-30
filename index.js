@@ -43,7 +43,7 @@ function generateVanityAddress (prefix, suffix, opts = {}) {
 
     const proc = cp.spawn(bin, [
       '--matching', pattern,
-      '-z', keyPair.publicKey.slice(2)
+      '-z', keyPair.publicKey
     ], { cwd })
 
     const keyPair2 = {
@@ -115,7 +115,7 @@ function generateVanityAddress (prefix, suffix, opts = {}) {
 function generateKeyPair () {
   const key = secp256k1.genKeyPair()
 
-  const publicKey = key.getPublic('hex')
+  const publicKey = key.getPublic('hex').slice(2)
   const privateKey = key.getPrivate('hex')
 
   return { publicKey, privateKey }
@@ -125,7 +125,7 @@ function addPrivateKeys (pk1, pk2) {
   const a = bigInt(pk1, 16)
   const b = bigInt(pk2, 16)
 
-  const sum = a.plus(b).mod(bigInt('FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F', 16))
+  const sum = a.plus(b).mod(bigInt('FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F', 16))
 
   return sum.toString(16)
 }
