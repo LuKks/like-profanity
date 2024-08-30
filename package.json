@@ -1,6 +1,6 @@
 {
   "name": "like-profanity",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Generate a vanity ETH address with a given prefix and suffix",
   "main": "index.js",
   "bin": {
