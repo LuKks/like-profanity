@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const minimist = require('minimist')
 const crayon = require('tiny-crayon')
 const profanity = require('./index.js')
