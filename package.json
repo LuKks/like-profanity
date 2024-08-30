@@ -1,0 +1,33 @@
+{
+  "name": "like-profanity",
+  "version": "0.0.0",
+  "description": "Generate a vanity ETH address with a given prefix and suffix",
+  "main": "index.js",
+  "bin": {
+    "profanity": "bin.js"
+  },
+  "files": [],
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukks/like-profanity.git"
+  },
+  "author": "Lucas Barrena (LuKks)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukks/like-profanity/issues"
+  },
+  "homepage": "https://github.com/lukks/like-profanity#readme",
+  "devDependencies": {
+    "brittle": "^3.7.0",
+    "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "big-integer": "^1.6.52",
+    "elliptic": "^6.5.7",
+    "minimist": "^1.2.8",
+    "tiny-crayon": "^1.0.5"
+  }
+}
